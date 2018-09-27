@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i')
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono')
+
+*
+    margin: 0
+    padding: 0
+    &::selection 
+        background: rgb(38, 120, 255)
+        opacity: 1
+        color: white
+
+body 
+    overflow: hidden
+#main
+    margin: 0
+    padding: 3em
+    width: calc(100% - 3em * 2)
+    height: calc(100vh - 3em * 2)
+    border: 0
+    resize: none
+    font-family: 'IBM Plex Mono'
+    font-size: 1.5em
+    color: black
+    background: linear-gradient(to top left, #f5f5f5 0%, #f6f6f6 100%)
+    &:focus
+        outline: 0
+    
+.info
+    position: absolute
+    top: 1em
+    right: 3em
+    padding: 0.5rem
+    color: black
+    background: white
+    transition: 0.2s ease-in-out
+    cursor: pointer
+    box-shadow: 0 2px 10px -5px rgba(black, 0.9)
+    opacity: 0.7
+    &:hover
+        box-shadow: 0 5px 10px -5px rgba(black, 0.9)
+        opacity: 1
+p, h3, h2, h1, ul
+    font-family: 'Ubuntu Mono'
+
+h3
+    font-size: 1.25rem
+
+h2
+    font-size: 2rem
+h1
+    font-size: 3rem
+a
+    text-decoration: none
+    color: blue
+.modal
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 400px
+    height: auto
+    padding: 3rem
+    background: white
+    border-radius: 5px
+    box-shadow: 0 40px 80px -40px rgba(black, 0.5)
+    display: none
+    animation: 0.2s modalFadeOut forwards
+    h3,h2
+        margin: 10px 0
+    .close
+        display: inline-block
+        background: red
+        color: red
+        padding: 0.25em 0.5em
+        font-weight: 900
+        position: absolute
+        border-radius: 20px
+        top: 1rem
+        left: 1rem
+        cursor: pointer
+        transition: 0.2s ease-out
+        font-size: 0.25em
+        // box-shadow: 0 5px 20px -5px rgba(198,0,0, 1)
+        &:hover
+            color: white
+.modal.active
+    display: block
+    animation: 0.5s ease-out modalFadeIn forwards
+
+@keyframes modalFadeIn
+    0%
+        opacity: 0
+        box-shadow: 0 0px 40px -20px rgba(black, 0.25)
+        top: 60%
+    100%
+        opacity: 1
+@keyframes modalFadeOut
+    0%
+        opacity: 1
+        display: block
+    99%
+        display: block
+    100%
+        opacity: 0
+        display: none
