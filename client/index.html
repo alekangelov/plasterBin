@@ -6,6 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PlasterBin - Simple Pasting</title>
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/site.webmanifest">
+    <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="/assets/img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <textarea name="paste" id="main"></textarea>
@@ -19,7 +29,7 @@
         </h2>
         <p>
             PlasterBin came out of a need to make a super simple paste app with all the bells and whistles an app like this should have, but with the fat cut off.<br>
-            PlasterBin was made with Javascript and 😈<br>
+            PlasterBin was made with Javascript and 🧙‍♂️<br>
             By <a href="http://alekangelov.com">Alek Angelov</a>
         </p>
         <br>
@@ -27,16 +37,26 @@
             Keyboard Shortcuts
         </h3>
         <ul>
-            <li>CTRL+S - Save Plaster</li>
-            <li>CTRL+I - New Plaster</li>
-            <li>CTRL+U - Delete Plaster</li>
+            <li>CMD/CTRL+S - Save Plaster</li>
+            <li>CMD/CTRL+D - New Plaster</li>
+            <li>CMD/CTRL+F - Delete Plaster</li>
+            <li>CMD/CTRL+SHIFT+D - Dark Mode</li>
         </ul>
+        <span id="tooltip">click to copy</span>
+        <input type='text' id="pasteId">
+    </div>
+    <div class="bottomBar">
+        <ul>
+            <a id='saveButton'><li>Save</li></a>
+            <a id='newButton'><li>New</li></a>
+            <a id='deleteButton'><li>Delete</li></a>
+        </ul>
+    </div>
+    <div class="notification">
         
     </div>
 </body>
-<script src="assets/js/mousetrap.min.js"></script>
-<script src="assets/js/keymaster.js"></script>
+<script src="assets/js/hotkeys.min.js"></script>
+<script src="assets/js/axios.min.js"></script>
 <script src="assets/js/app.js"></script>
-<script>
-</script>
 </html>

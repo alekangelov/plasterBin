@@ -1,0 +1,72 @@
+body.dark {
+  background: #212121;
+  -webkit-transition: 0.5s ease-in-out background;
+  transition: 0.5s ease-in-out background;
+}
+
+body.dark #main {
+  -webkit-transition: 0.5s ease-in-out color;
+  transition: 0.5s ease-in-out color;
+  color: white;
+}
+
+body.dark #main:focus {
+  outline: 0;
+}
+
+body.dark .info {
+  background-color: #333333;
+  -webkit-transition: 0.5s ease-in-out color background-color box-shadow opacity;
+  transition: 0.5s ease-in-out color background-color box-shadow opacity;
+  color: white;
+  -webkit-box-shadow: 0 2px 10px -5px rgba(0, 0, 255, 0.9);
+          box-shadow: 0 2px 10px -5px rgba(0, 0, 255, 0.9);
+}
+
+body.dark .info:hover {
+  -webkit-box-shadow: 0 5px 10px -5px blue;
+          box-shadow: 0 5px 10px -5px blue;
+  opacity: 1;
+}
+
+body.dark a {
+  color: #ff00e1;
+}
+
+body.dark .modal {
+  background-color: #333333;
+  -webkit-box-shadow: 0 40px 80px -40px rgba(0, 0, 255, 0.5);
+          box-shadow: 0 40px 80px -40px rgba(0, 0, 255, 0.5);
+  -webkit-transition: 0.5s ease-in-out color background-color box-shadow opacity;
+  transition: 0.5s ease-in-out color background-color box-shadow opacity;
+  color: white;
+  display: none;
+  opacity: 0;
+}
+
+body.dark .modal.active {
+  display: block;
+  -webkit-animation: 0.5s ease-out modalFadeIn forwards;
+          animation: 0.5s ease-out modalFadeIn forwards;
+}
+
+body.dark .notification {
+  background: #333333;
+  color: white;
+  -webkit-box-shadow: 0 10px 20px -10px rgba(0, 0, 255, 0.7);
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 255, 0.7);
+}
+
+body.dark .bottomBar {
+  background: #f6f6f6;
+}
+
+body.dark .bottomBar a:nth-child(2) {
+  border-left: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+body.dark .bottomBar ul li {
+  color: black;
+}
+/*# sourceMappingURL=dark.css.map */
